@@ -1,0 +1,62 @@
+package com.company;
+
+class Mahasiswa{
+    String nama;
+    String npm;
+    String alamat;
+    int usia;
+    double ipk;
+
+    Mahasiswa(String nama, String npm, String alamat, int usia, double ipk){
+        this.nama = nama;
+        this.npm = npm;
+        this.alamat = alamat;
+        this.usia = usia;
+        this.ipk = ipk;
+    }
+
+    // Method tanpa retrun dan tanpa parameter
+    void tampilData(){
+        System.out.println("Nama : " + nama);
+        System.out.println("NPM : " + npm);
+        System.out.println("Alamat : " + alamat);
+        System.out.println("Usia : " + usia);
+        System.out.println("IPK : " + ipk);
+    }
+
+    // Method tanpa return dengan parameter
+    void setAlamat(String alamat){
+        this.alamat = alamat;
+    }
+
+    // Method dengan return tanpa parameter
+    String getNpm(){
+        return npm;
+    }
+
+    // Method dengan return dan parameter
+    String makanan (String nama){
+        this.nama = nama;
+        return "Pecel lele dari " + nama;
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        Mahasiswa affan = new Mahasiswa("Affan Maulana", "2015061016","Bandarlampung",19, 4.0);
+
+        // panggil method tanpa return dan parameter
+        affan.tampilData();
+
+        // panggil method  tanpa return dengan parameter
+        affan.setAlamat("Tulang Bawang");
+        affan.tampilData();
+
+        // panggil method dengan return tanpa parameter
+        System.out.println(affan.getNpm());
+
+        // panggil method dengan return dan parameter
+        System.out.println(affan.makanan("Rocky"));
+    }
+}
